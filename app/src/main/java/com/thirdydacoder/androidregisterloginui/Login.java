@@ -1,5 +1,6 @@
 package com.thirdydacoder.androidregisterloginui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,11 +41,15 @@ public class Login extends AppCompatActivity {
     }
 
     private void forgotPassword() {
-
+        btnForgotPassword.setOnClickListener(v -> {
+            startActivity(new Intent(this, ForgotPassword.class));
+        });
     }
 
     private void register(){
-
+        btnRegister.setOnClickListener(v -> {
+            startActivity(new Intent(this, Register.class));
+        });
     }
 
 
